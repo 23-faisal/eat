@@ -1,3 +1,4 @@
+import Footer from "@/components/common/Footer";
 import Header from "@/components/common/Header";
 import Hero from "@/components/common/Hero";
 import React from "react";
@@ -12,7 +13,7 @@ const Layout = ({ children }: Props) => {
       <Header />
       <Hero />
       <div className="container mx-auto flex-1 py-10"> {children}</div>
-      <div>footer</div>
+      <Footer />
     </div>
   );
 };
