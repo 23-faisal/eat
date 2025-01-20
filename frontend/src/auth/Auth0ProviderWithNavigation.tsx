@@ -14,11 +14,10 @@ const Auth0ProviderWithNavigation = ({ children }: Props) => {
   const { createUser } = useCreateMyUser();
 
   if (!domain || !clientId || !redirectUri) {
-    throw new Error("Unable to inititate auth");
+    throw new Error("Unable to initiate auth");
   }
 
   const onRedirectCallback = (appState?: AppState, user?: User) => {
-    console.log("User", user);
     if (user?.sub && user?.email) {
       createUser({ auth0Id: user?.sub, email: user.email });
     }
