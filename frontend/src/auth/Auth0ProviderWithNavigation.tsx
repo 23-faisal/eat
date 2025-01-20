@@ -11,7 +11,7 @@ const Auth0ProviderWithNavigation = ({ children }: Props) => {
   const clientId = import.meta.env.VITE_AUTH0_CLIENT_ID as string;
   const redirectUri = import.meta.env.VITE_AUTH0_CALLBACK_URI as string;
 
-  const { createUser, isLoading, isError, isSuccess } = useCreateMyUser();
+  const { createUser } = useCreateMyUser();
 
   if (!domain || !clientId || !redirectUri) {
     throw new Error("Unable to inititate auth");
